@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+<header>
+	<!--Profile-->
+    <div class="header-top">
+    <div class="Profile-back">
+        <button class="back-btn">
+        <i onclick="history.back()" class="fa-solid fa-arrow-left"></i>
+    </button>
+    </div>
+    	<h1 class="logo">
+		Taste Tribe
+		<i class="fa-solid fa-seedling"></i>
+		</h1>
+	<!--Profile-->
+		<li class="logout-btn1">
+			<a href="Login.html" title="LogIn/LogOut">
+				<i class="fa-solid fa-arrow-right-from-bracket"></i>
+				<span>Log Out</span>
+			</a>
+	</li>
+    </div>
+	<!--Navigation Bar-->
+	<nav id="nav-bar" class="collapsed">
+	<ul>
+		<li class="menu-btn">
+			<span class="menu">Menu</span>
+			<button onclick=toggleSidebar() id="toggle-btn">
+				<i class="fa-solid fa-bars"></i>
+			</button>
+		</li>
+		<li class="dropdown">
+			<a href="index.html" class="dropdown-toggle" title="Home">
+				<i class="fa-regular fa-house"></i>
+				<span>Home</span>
+				<i class="fa-solid fa-angle-down dropdown-icon"></i>
+			</a>
+			<ul class="sub-menu">
+        		<li><a href="index.html#about-us">About Us</a></li>
+        		<li><a href="index.html#trending-discussions">Trending Discussions</a></li>
+        		<li><a href="index.html#featured-guides">Featured Guides</a></li>
+                <li><a href="index.html#comm-highlights">Community Highlights</a></li>
+    		</ul>
+		</li>
+		<li>
+			<a href="Forum.html" title="Forum">
+				<i class="fa-regular fa-comments"></i>
+				<span>Forum</span>
+			</a>
+		</li>
+		<li class="dropdown">
+    		<a href="Resources.html" class="dropdown-toggle" title="Resources">
+        		<i class="fa-solid fa-gears"></i>
+        		<span>Resources</span>
+        		<i class="fa-solid fa-angle-down dropdown-icon"></i>
+    		</a>
+
+    		<ul class="sub-menu">
+        		<li><a href="Resources.html#food-exploration-guide">Food Exploration Guide</a></li>
+        		<li><a href="Resources.html#food-tips">Food Tips</a></li>
+        		<li><a href="Resources.html#cafe-hunting">Cafe Hunting</a></li>
+    		</ul>
+		</li>
+        <li class="logout-btn">
+			<a href="Login.html" title="LogIn/LogOut">
+				<i class="fa-solid fa-arrow-right-from-bracket"></i>
+				<span>Log Out</span>
+			</a>
+		</li>
+	</ul>
+    </nav>
+</header>
+<div class="HomePage">
+    <h1>Profile</h1>
+
+<main class="profile-container">
+
+    <!-- Profile Icon -->
+    <div class="profile-head">
+        <i class="fa-regular fa-user profile-icon"></i>
+    </div>
+
+    <!-- Username -->
+    <p class="username">JohnDoe123</p>
+
+    <!-- Bio -->
+    <p class="bio">Student foodie 🌱 | Loves budget eats & healthy meals</p>
+
+    <!-- Followers Section -->
+    <ul class="follower-container">
+        <li><strong>15</strong> Posts</li>
+        <li><strong>120</strong> Followers</li>
+        <li><strong>80</strong> Following</li>
+    </ul>
+
+    <!-- Tabs -->
+    <div class="profile-tabs">
+        <button class="tab-btn" onclick="openProfileTab('posts')">Posts</button>
+        <button class="tab-btn" onclick="openProfileTab('saved')">Saved</button>
+        <button class="tab-btn" onclick="openProfileTab('settings')">Settings</button>
+    </div>
+
+    <!-- Recent-activity -->
+    <div class="recent-activity">
+            <h2>Recent Activity</h2>
+            <ul>
+                <li>
+                    <p>Reviewed <strong>Ramen Street</strong> - “Delicious broth and perfectly cooked noodles!”</p>
+                    <span>2 days ago</span>
+                </li>
+                <li>
+                    <p>Posted a photo from <strong>Sweet Treats Café</strong></p>
+                    <span>5 days ago</span>
+                </li>
+                <li>
+                    <p>Commented on <strong>Hidden Street Food Gems</strong> forum thread</p>
+                    <span>1 week ago</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="saved-items">
+            <h2>Saved Restaurants & Recipes</h2>
+            <ul>
+                <li>Char Kway Teow – Penang</li>
+                <li>Nasi Lemak Special – Kuala Lumpur</li>
+                <li>Chocolate Lava Cake – Sweet Treats Café</li>
+            </ul>
+        </div>
+
+</main>
+</div>
+
+<footer>
+    <p>© 2026 Taste Tribe | All Rights Reserved</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

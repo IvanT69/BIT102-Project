@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body class="LoginPage">
+    <div class="form-container">
+    <!--Login-->
+    <div class="form-box-login" id="form-box-login">
+        <form action="#">
+        <h1 class="login-heading">Login</h1>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password" required>
+            </div>
+            <div class="link-container">
+                <div class="no-account-link">
+                    <a href="#" id="register">Don't have an Account?</a>
+                </div>
+                <div class="forget-link">
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </div>
+            <button type="submit" class="btn" id="loginBtn">Login</button>
+            <p>or login with social platforms</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/accounts/login/?hl=en" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/"><i class="fa-brands fa-x-twitter" class="social-link"></i></a>
+                <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&dsh=S842857476%3A1772157042812143&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=ASfE1-rzKCkzUcMMcGLh4Y8BjeHvBZcRURl0-GDNQeUx4M8GlFaoj2dS2CHDzYj_JxMVfVA2drzxwA&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="social-link"><i class="fa-brands fa-google"></i></a>
+            </div>
+        </form>
+    </div>
+    
+    <!--Register-->
+    <div class="form-box-register hidden" id="form-box-register">
+        <form action="#">
+        <h1 class="register-heading">Register</h1>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+                <input type="email" class="input-field" placeholder="Email" required>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Create Password" required>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Confirm Password" required>
+            </div>
+            <div class="have-account-link">
+                <a href="#" id="login">Already have an Account?</a>
+            </div>
+            <button type="submit" class="btn" id="registerBtn">Register</button>
+        </form>
+    </div>
+    </div>
+<script src="loginscript.js"></script>
+</body>
+</html>

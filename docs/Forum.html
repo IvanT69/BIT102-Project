@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+<header>
+	<div class="header-top">
+    	<h1 class="logo">
+		Taste Tribe
+		<i class="fa-solid fa-seedling"></i>
+		</h1>
+	<!--Profile-->
+		<div class="Profile">
+        	<a href="Profile.html" class="profile-link" title="Profile">
+            	<i class="fa-regular fa-user"></i>
+        	</a>
+    	</div>
+	</div>
+	<!--Navigation Bar-->
+	<nav id="nav-bar" class="collapsed">
+	<ul>
+		<li class="menu-btn">
+			<span class="menu">Menu</span>
+			<button onclick=toggleSidebar() id="toggle-btn">
+				<i class="fa-solid fa-bars"></i>
+			</button>
+		</li>
+		<li class="dropdown">
+			<a href="index.html" class="dropdown-toggle" title="Home">
+				<i class="fa-regular fa-house"></i>
+				<span>Home</span>
+				<i class="fa-solid fa-angle-down dropdown-icon"></i>
+			</a>
+			<ul class="sub-menu">
+        		<li><a href="index.html#about-us">About Us</a></li>
+        		<li><a href="index.html#trending-discussions">Trending Discussions</a></li>
+        		<li><a href="index.html#featured-guides">Featured Guides</a></li>
+				<li><a href="index.html#comm-highlights">Community Highlights</a></li>
+    		</ul>
+		</li>
+		<li>
+			<a href="Forum.html" title="Forum">
+				<i class="fa-regular fa-comments"></i>
+				<span>Forum</span>
+			</a>
+		</li>
+		<li class="dropdown">
+    		<a href="Resources.html" class="dropdown-toggle" title="Resources">
+        		<i class="fa-solid fa-gears"></i>
+        		<span>Resources</span>
+        		<i class="fa-solid fa-angle-down dropdown-icon"></i>
+    		</a>
+
+    		<ul class="sub-menu">
+        		<li><a href="Resources.html#food-exploration-guide">Food Exploration Guide</a></li>
+        		<li><a href="Resources.html#food-tips">Food Tips</a></li>
+        		<li><a href="Resources.html#cafe-hunting">Cafe Hunting</a></li>
+    		</ul>
+		</li>
+		<li class="logout-btn">
+			<a href="Login.html" title="LogIn/LogOut">
+				<i class="fa-solid fa-arrow-right-from-bracket"></i>
+				<span>Log Out</span>
+			</a>
+		</li>
+	</ul>
+	</nav>
+    </header>
+	<!--Sidebar-->
+	<div class="HomePage">
+	<main>
+	<h1>Forum</h1>
+	<section>
+  		<h2>Community Forum</h2>
+  		<p>Welcome to the Taste Tribe forum! Share your dining experiences, ask questions, and join discussions with fellow food lovers. 
+			Members can reply, comment, and help each other discover new food spots.</p>
+	</section>
+	<!-- Search Bar -->
+	<div class="forum-search">
+    	<input type="text" id="searchInput" placeholder="Search discussions...">
+	</div>
+
+<!--Category Filter-->
+	<div class="forum-filter">
+    <label for="categoryFilter">Filter by Category:</label>
+    <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="General Discussion">General Discussion</option>
+        <option value="Restaurant Reviews">Restaurant Reviews</option>
+        <option value="Food Recommendations">Food Recommendations</option>
+        <option value="Food Experiences">Food Experiences</option>
+    </select>
+</div>
+
+<!-- Forum Threads -->
+<div class="forum-container" id="forumList">
+    <!-- General Food Discussion -->
+    <div class="forum-card">
+        <h3>What is your favorite comfort food?</h3>
+        <p>Category: General Discussion</p>
+        <span>15 Replies</span>
+    </div>
+
+    <div class="forum-card" data-category="General Discussion">
+        <h3>What dish do you always recommend to friends?</h3>
+        <p>Category: General Discussion</p>
+        <span>10 Replies</span>
+    </div>
+
+    <div class="forum-card" data-category="General Discussion">
+        <h3>Which cuisine do you enjoy the most?</h3>
+        <p>Category: General Discussion</p>
+        <span>7 Replies</span>
+    </div>
+
+    <!-- Restaurant Reviews -->
+    <div class="forum-card" data-category="Restaurant Reviews">
+        <h3>Review: Nasi Kandar Line Clear</h3>
+        <p>Category: Restaurant Reviews</p>
+        <span>12 Replies</span>
+    </div>
+
+    <div class="forum-card" data-category="Restaurant Reviews">
+        <h3>Review: New ramen shop in town</h3>
+        <p>Category: Restaurant Reviews</p>
+        <span>9 Replies</span>
+    </div>
+
+    <!-- Food Recommendations -->
+    <div class="forum-card" data-category="Food Recommendations">
+        <h3>Best cafés for studying</h3>
+        <p>Category: Food Recommendations</p>
+        <span>6 Replies</span>
+    </div>
+
+    <div class="forum-card" data-category="Food Recommendations">
+        <h3>Cheap eats for university students</h3>
+        <p>Category: Food Recommendations</p>
+        <span>8 Replies</span>
+    </div>
+
+    <div class="forum-card" data-category="Food Recommendations">
+        <h3>Where to find the best bubble tea?</h3>
+        <p>Category: Food Recommendations</p>
+        <span>5 Replies</span>
+    </div>
+
+    <!-- Food Experiences -->
+    <div class="forum-card" data-category="Food Experiences">
+        <h3>Trying street food at a night market</h3>
+        <p>Category: Food Experiences</p>
+        <span>4 Replies</span>
+    </div>
+
+    <div class="forum-card" data-category="Food Experiences">
+        <h3>Visiting a famous food festival</h3>
+        <p>Category: Food Experiences</p>
+        <span>3 Replies</span>
+    </div>
+
+    <div class="forum-card" data-category="Food Experiences">
+        <h3>Discovering a hidden restaurant</h3>
+        <p>Category: Food Experiences</p>
+        <span>5 Replies</span>
+    </div>
+
+</div>
+	</main>
+	</div>
+<footer>
+    <p>© 2026 Taste Tribe | All Rights Reserved</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

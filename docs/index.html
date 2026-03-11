@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste Tribe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <header>
+	<div class="header-top">
+    	<h1 class="logo">
+		Taste Tribe
+		<i class="fa-solid fa-seedling"></i>
+		</h1>
+	<!--Profile-->
+		<div class="Profile">
+        	<a href="Profile.html" class="profile-link" title="Profile">
+            	<i class="fa-regular fa-user"></i>
+        	</a>
+    	</div>
+	</div>
+	<!--Navigation Bar-->
+	<nav id="nav-bar" class="collapsed">
+	<ul>
+		<li class="menu-btn">
+			<span class="menu">Menu</span>
+			<button onclick=toggleSidebar() id="toggle-btn">
+				<i class="fa-solid fa-bars"></i>
+			</button>
+		</li>
+		<li class="dropdown">
+			<a href="index.html" class="dropdown-toggle" title="Home">
+				<i class="fa-regular fa-house"></i>
+				<span>Home</span>
+				<i class="fa-solid fa-angle-down dropdown-icon"></i>
+			</a>
+			<ul class="sub-menu">
+        		<li><a href="index.html#about-us">About Us</a></li>
+        		<li><a href="index.html#trending-discussions">Trending Discussions</a></li>
+        		<li><a href="index.html#featured-guides">Featured Guides</a></li>
+				<li><a href="index.html#comm-highlights">Community Highlights</a></li>
+    		</ul>
+		</li>
+		<li>
+			<a href="Forum.html" title="Forum">
+				<i class="fa-regular fa-comments"></i>
+				<span>Forum</span>
+			</a>
+		</li>
+		<li class="dropdown">
+    		<a href="Resources.html" class="dropdown-toggle" title="Resources">
+        		<i class="fa-solid fa-gears"></i>
+        		<span>Resources</span>
+        		<i class="fa-solid fa-angle-down dropdown-icon"></i>
+    		</a>
+
+    		<ul class="sub-menu">
+        		<li><a href="Resources.html#food-exploration-guide">Food Exploration Guide</a></li>
+        		<li><a href="Resources.html#food-tips">Food Tips</a></li>
+        		<li><a href="Resources.html#cafe-hunting">Cafe Hunting</a></li>
+    		</ul>
+		</li>
+		<li class="logout-btn">
+			<a href="Login.html" title="LogIn/LogOut">
+				<i class="fa-solid fa-arrow-right-from-bracket"></i>
+				<span>Log Out</span>
+			</a>
+		</li>
+	</ul>
+	</nav>
+    </header>
+	<!--Sidebar-->
+	<div class="HomePage">
+        <h1>Discover Food Choices Together</h1>
+        <p>Welcome to Taste Tribe, 
+			a vibrant community for food lovers who enjoy exploring new restaurants, 
+			sharing honest reviews, and discovering hidden food gems. 
+			Whether you’re searching for the best ramen in town or looking for affordable student meals, 
+			Taste Tribe welcomes all food enthusiasts who want to discover new dining establishments and provide truthful restaurant evaluations while finding secret dining locations. 
+			Taste Tribe helps you find others who share your love for food whether you want to find the best ramen in town or need budget-friendly dining options for students. 
+			Our team will discover exceptional culinary experiences which we will assess together with yosu before we bestow our culinary honors.
+		</p>
+        
+    <!--About Us-->
+	<section class="about-us" id="about-us"></section>
+		<h2>About the Community</h2>
+		<h3>About Taste Tribe</h3>
+		<p>Taste Tribe was created to bring together people who love food and enjoy sharing their experiences with others. 
+	   		Food is more than just a necessity; it is part of culture, lifestyle, and social connection. 
+	   		Through Taste Tribe, members can discuss their favorite dishes, recommend restaurants, and discover new cuisines.
+	   		The community welcomes students, travelers, and local food enthusiasts who want to explore food in an engaging and friendly environment.</p>
+	</section>
+
+	<!-- FEATURED SECTION -->
+ <section class="trending-discussions" id="trending-discussions">
+  <h2>Trending Discussions</h2>
+  <h3>Popular Topics in the Community</h3>
+
+  <div class="discussion-item">
+    <h4>Best ramen places in Penang?</h4>
+    <p>Members are sharing their favorite ramen spots and comparing broth quality, noodle texture, and prices.</p>
+  </div>
+
+  <div class="discussion-item">
+    <h4>Affordable student meals under RM10</h4>
+    <p>Students recommend budget-friendly food stalls and restaurants that offer good value meals.</p>
+  </div>
+
+  <div class="discussion-item">
+    <h4>Best dessert cafés for late-night hangouts</h4>
+    <p>Community members suggest cozy dessert cafés that stay open late.</p>
+  </div>
+
+  <div class="discussion-item">
+    <h4>Hidden street food gems</h4>
+    <p>Members discuss underrated street food stalls that tourists might not know about.</p>
+  </div>
+</section>
+
+<!-- Featured Food Guides Section -->
+<section class="featured-guides" id="featured-guides">
+  <h2>Featured Food Guides</h2>
+  <h3>Food Guides from the Community</h3>
+
+  <ul>
+    <li>
+      <strong>Beginner’s Guide to Food Hunting</strong><br>
+      Learn how to explore food spots effectively and discover the best dishes in your city.
+    </li>
+
+    <li>
+      <strong>Top Malaysian Street Foods You Must Try</strong><br>
+      Explore popular street foods such as char kway teow, nasi lemak, and roti canai.
+    </li>
+
+    <li>
+      <strong>How to Spot a Great Restaurant</strong><br>
+      Learn tips on identifying quality food, good service, and authentic cuisine.
+    </li>
+  </ul>
+</section>
+
+<!-- Community Highlights Section -->
+<section class="community-highlights" id="comm-highlights">
+  <h2>Community Highlights</h2>
+
+  <p>
+    Taste Tribe is built on community participation. Members actively contribute by sharing
+    restaurant reviews, posting food photos, and answering questions from other users.
+  </p>
+
+  <h3>Recent Community Activity</h3>
+
+  <ul>
+    <li>New restaurant recommendations</li>
+    <li>Food photography posts</li>
+    <li>Discussions about trending food spots</li>
+    <li>Reviews of newly opened cafés</li>
+  </ul>
+</section>
+</div>
+<footer>
+    <p>© 2026 Taste Tribe | All Rights Reserved</p>
+</footer>
+	</div>
+<script src="script.js"></script>
+</body>
+</html>

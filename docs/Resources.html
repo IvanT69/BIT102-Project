@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+<header>
+	<div class="header-top">
+    	<h1 class="logo">
+		Taste Tribe
+		<i class="fa-solid fa-seedling"></i>
+		</h1>
+	<!--Profile-->
+		<div class="Profile">
+        	<a href="Profile.html" class="profile-link" title="Profile">
+            	<i class="fa-regular fa-user"></i>
+        	</a>
+    	</div>
+	</div>
+	<!--Navigation Bar-->
+	<nav id="nav-bar" class="collapsed">
+	<ul>
+		<li class="menu-btn">
+			<span class="menu">Menu</span>
+			<button onclick=toggleSidebar() id="toggle-btn">
+				<i class="fa-solid fa-bars"></i>
+			</button>
+		</li>
+		<li class="dropdown">
+			<a href="index.html" class="dropdown-toggle" title="Home">
+				<i class="fa-regular fa-house"></i>
+				<span>Home</span>
+				<i class="fa-solid fa-angle-down dropdown-icon"></i>
+			</a>
+			<ul class="sub-menu">
+        		<li><a href="index.html#about-us">About Us</a></li>
+        		<li><a href="index.html#trending-discussions">Trending Discussions</a></li>
+        		<li><a href="index.html#featured-guides">Featured Guides</a></li>
+				<li><a href="index.html#comm-highlights">Community Highlights</a></li>
+    		</ul>
+		</li>
+		<li>
+			<a href="Forum.html" title="Forum">
+				<i class="fa-regular fa-comments"></i>
+				<span>Forum</span>
+			</a>
+		</li>
+		<li class="dropdown">
+    		<a href="Resources.html" class="dropdown-toggle" title="Resources">
+        		<i class="fa-solid fa-gears"></i>
+        		<span>Resources</span>
+        		<i class="fa-solid fa-angle-down dropdown-icon"></i>
+    		</a>
+
+    		<ul class="sub-menu">
+        		<li><a href="Resources.html#food-exploration-guide">Food Exploration Guide</a></li>
+        		<li><a href="Resources.html#food-tips">Food Tips</a></li>
+        		<li><a href="Resources.html#cafe-hunting">Cafe Hunting</a></li>
+    		</ul>
+		</li>
+		<li class="logout-btn">
+			<a href="Login.html" title="LogIn/LogOut">
+				<i class="fa-solid fa-arrow-right-from-bracket"></i>
+				<span>Log Out</span>
+			</a>
+		</li>
+	</ul>
+	</nav>
+    </header>
+	<!--Sidebar-->
+<div class="HomePage">
+  <main>
+    <section>
+  		<h1>Resources</h1>
+  		<p>The Resources section provides guides, tips, and curated content to help food enthusiasts explore and enjoy food culture more effectively.</p>
+	</section>
+
+<section id="food-exploration-guide">
+  <h2>Food Exploration Guides</h2>
+  <h3>Beginner’s Guide to Food Hunting</h3>
+  <p>Food hunting is a popular activity among food lovers. To start exploring new food places, consider the following tips:</p>
+  <ul>
+    <li>Research popular dishes in your area.</li>
+    <li>Ask locals for recommendations.</li>
+    <li>Try small food stalls instead of only large restaurants.</li>
+    <li>Be open to trying unfamiliar foods.</li>
+  </ul>
+  <p>Exploring food is not only about taste but also about experiencing culture.</p>
+
+  <h3>Popular Malaysian Dishes</h3>
+  <p>Malaysia has a rich and diverse food culture influenced by Malay, Chinese, and Indian cuisines. Some must-try dishes include:</p>
+  <ul>
+    <li><strong>Nasi Lemak</strong> – fragrant rice served with sambal, egg, peanuts, and anchovies.</li>
+    <li><strong>Char Kway Teow</strong> – stir-fried noodles with shrimp, egg, and bean sprouts.</li>
+    <li><strong>Roti Canai</strong> – crispy flatbread served with curry.</li>
+    <li><strong>Laksa</strong> – spicy noodle soup with rich broth.</li>
+  </ul>
+
+  <h3>How to Spot a Great Restaurant</h3>
+  <p>Tips to identify a good restaurant:</p>
+  <ul>
+    <li>Check the quality and freshness of ingredients.</li>
+    <li>Look for good service and a welcoming environment.</li>
+    <li>Observe how busy the restaurant is — often a sign of popularity.</li>
+    <li>Consider the authenticity of the cuisine.</li>
+  </ul>
+</section>
+
+<section class="food-tips" id="food-tips">
+  <h2>Budget Food Tips for Students</h2>
+  <p>Many students want to enjoy good food without spending too much money. Helpful tips:</p>
+  <ul>
+    <li>Look for student meal promotions.</li>
+    <li>Visit food courts or hawker centers.</li>
+    <li>Share meals with friends.</li>
+    <li>Explore street food markets.</li>
+  </ul>
+  <p>Budget-friendly food options can still offer excellent taste and quality.</p>
+</section>
+
+<section id="cafe-hunting">
+  <h2>Café Hunting Guide</h2>
+  <p>Café culture has become increasingly popular. When choosing a café, consider:</p>
+  <ul>
+    <li>Comfortable seating and good lighting for studying.</li>
+    <li>Affordable drinks and food options.</li>
+    <li>Cozy and friendly atmosphere.</li>
+    <li>Unique desserts or specialty coffee.</li>
+  </ul>
+  <p>Some cafés also offer opportunities to take food photos for social media or blogs.</p>
+</section>
+
+  </main>
+</div>
+<footer>
+    <p>© 2026 Taste Tribe | All Rights Reserved</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
