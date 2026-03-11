@@ -4,15 +4,15 @@
     --header-clr: #505B4E;
     --footer-clr: #505B4E;
 	--background-clr: #C2C6BC;
-	--border-clr: #eff2ef;
+	--border-clr: #171717;
 	--hover-clr: #9EA68F;
     --hover-text-clr: #171717;
 	--text-clr: #171717;
 	--secondary-text-clr: #eff2ef;
     --btn-clr: #3B5A46;
     --btn-clr-hover: #4F755E;
-    --card-clr:#28352c;
-    --card-text-clr: #171717;
+    --card-clr:#505B4E;
+    --card-text-clr: #eff2ef;
 	--font-type: "Montserrat", sans-serif;
     --logo-type: "Satisfy", cursive;
 
@@ -301,9 +301,24 @@ header {
     cursor: pointer;
 }
 
+.Profile i:hover {
+    background-color: var(--hover-clr);
+    color: var(--hover-text-clr);   
+    border-color: var(--hover-text-clr-clr); 
+}
+
+.Profile i:hover i, 
+.Profile i:hover span {
+    color: var(--hover-text-clr);
+}
+
 .HomePage {
     padding-top: 20px;
     align-items: center;
+
+    p, h1, h2, h3, h4, ul li, ul li strong{
+        color: var(--text-clr);
+    }
 
     h1{
     font-family: var(--font-type);
@@ -362,6 +377,7 @@ header {
 
 .featured-guides ul strong, .community-highlights ul {
     text-decoration: underline; 
+    color: var(--text-clr);
 }
 
 
@@ -386,8 +402,8 @@ footer {
 #nav-bar {
     width: 100%;
     background: var(--header-clr);
-    border-top: 1px solid var(--border-clr);
-    border-bottom: 1px solid var(--border-clr);
+    border-top: 1px solid var(--secondary-text-clr);
+    border-bottom: 1px solid var(--secondary-text-clr);
     z-index: 1001;
     flex-direction: column;
     position: relative;
@@ -418,6 +434,7 @@ footer {
 
 #nav-bar ul li a:hover, 
 #nav-bar ul li button:hover {
+    border-color: #000;
     background-color: var(--hover-clr);
     color: var(--hover-text-clr);
 }
@@ -774,6 +791,7 @@ footer p{
     margin: 0px auto;
     align-items: center; 
     justify-content: center;
+    color: var(--secondary-text-clr);
 }
 
 .profile-container .bio{
@@ -886,12 +904,20 @@ footer p{
     justify-content: center;
     align-items: center;
 }
+.HomePage .forum-filter label{
+    color: var(--text-clr);
+}
 
 #categoryFilter, #categoryFilter option{
     padding: 12px;
     border-radius: 12px;
     margin-left: 12px;
-    color: black;
+    color: var(--text-clr);
+}
+.HomePage .forum-card {
+    h3,p,span{
+    color: var(--card-text-clr);
+    }
 }
 
 .forum-card {
