@@ -416,9 +416,18 @@ footer {
     cursor: pointer;
 }
 
-#nav-bar ul li a:hover, i:hover   {
+#nav-bar ul li a:hover, 
+#nav-bar ul li button:hover {
     background-color: var(--hover-clr);
-    color: var(--secondary-text-clr);
+    color: var(--hover-text-clr);
+}
+
+#nav-bar ul li a:hover i,
+#nav-bar ul li a:hover span,
+#nav-bar ul li button:hover i,
+#nav-bar ul li button:hover span {
+    color: var(--hover-text-clr);
+    background: transparent; 
 }
 
 .menu-btn, .logout-btn {
