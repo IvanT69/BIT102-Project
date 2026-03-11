@@ -1,16 +1,18 @@
 @charset "utf-8";
 /* --- Main Layout Styles --- */
 :root{
-    --header-clr: #171717;
-    --footer-clr: #171717;
-	--background-clr: #212622;
+    --header-clr: #505B4E;
+    --footer-clr: #505B4E;
+	--background-clr: #C2C6BC;
 	--border-clr: #eff2ef;
-	--hover-clr: #333333;
-	--text-clr: #fff9ef;
-	--secondary-text-clr: #fff9ef;
+	--hover-clr: #9EA68F;
+    --hover-text-clr: #171717;
+	--text-clr: #171717;
+	--secondary-text-clr: #eff2ef;
     --btn-clr: #3B5A46;
     --btn-clr-hover: #4F755E;
     --card-clr:#28352c;
+    --card-text-clr: #171717;
 	--font-type: "Montserrat", sans-serif;
     --logo-type: "Satisfy", cursive;
 
@@ -477,7 +479,7 @@ header .logout-btn1{
 
 #nav-bar ul li a:hover {
     background-color: var(--hover-clr);
-    color: var(--secondary-text-clr);
+    color: var(--hover-text-clr);
 }
 
 #nav-bar i, span {
@@ -543,6 +545,7 @@ header .logout-btn1{
 
     #nav-bar ul {
         flex-direction: column;
+        color:var(--secondary-text-clr);    
     }
 
     #nav-bar ul li {
