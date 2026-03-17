@@ -178,7 +178,7 @@ body{
 	justify-content: center;
 	padding: 5px 20px;
     margin-top: 10px;
-    border-color: var(--border-clr);
+    border: none;
 	border-radius: 10px;
 	cursor: pointer;
     background-color: var(--btn-clr);
@@ -188,6 +188,7 @@ body{
 
 .btn:hover{
     transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 	background-color: var(--btn-clr-hover);
     color: var(--secondary-text-clr);
 }
@@ -207,6 +208,7 @@ p{
 
 .social-icons i {
     color: var(--footer-clr);
+    background: white;
     border: 2px solid var(--footer-clr);
     border-radius: 50%;
     width: 60px;     
@@ -992,6 +994,12 @@ footer p{
     height: 180px;  
     display: flex;               
     flex-direction: column;     
+    transition: 0.3s;
+}
+
+.forum-card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
 .forum-card span{
