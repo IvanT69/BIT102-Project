@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* --- Main Layout Styles --- */
 :root{
-    --header-clr: #505B4E;
+    --header-clr: linear-gradient(180deg, #575B4E, #505B4E);
     --footer-clr: #505B4E;
 	--background-clr: #C2C6BC;
 	--border-clr: #171717;
@@ -9,8 +9,8 @@
     --hover-text-clr: #171717;
 	--text-clr: #171717;
 	--secondary-text-clr: #eff2ef;
-    --btn-clr: #3B5A46;
-    --btn-clr-hover: #4F755E;
+    --btn-clr: #505B4E;
+    --btn-clr-hover: #4E5B57;
     --card-clr:#505B4E;
     --card-text-clr: #eff2ef;
 	--font-type: "Montserrat", sans-serif;
@@ -80,7 +80,7 @@ body{
 	justify-content: center;
 	min-height: 100vh;
 	padding: 0 20px;
-    background-color: var(--header-clr);
+    background: var(--header-clr);
 }
 
 .LoginPage .logo{
@@ -109,7 +109,9 @@ body{
     border: 3px solid var(--card-text-clr);
     border-radius: 50px;
     padding: 20px; 
-    background-color: var(--background-clr)
+    background-color: var(--background-clr);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
 }
 
 .form-box-login,
@@ -173,12 +175,14 @@ body{
 	border-radius: 10px;
 	cursor: pointer;
     background-color: var(--btn-clr);
-    color: var(--text-clr);
+    color: var(--secondary-text-clr);
+    transition: 0.3s;
 }
 
 .btn:hover{
+    transform: translateY(-2px);
 	background-color: var(--btn-clr-hover);
-    color: var(--text-clr);
+    color: var(--secondary-text-clr);
 }
 
 p{
@@ -195,19 +199,21 @@ p{
 }
 
 .social-icons i {
-    color: #fff;
-    border: 2px solid #fff;
+    color: var(--footer-clr);
+    border: 2px solid var(--footer-clr);
     border-radius: 50%;
     width: 60px;     
     height: 60px;      
     display: inline-flex;
     align-items: center;  
     justify-content: center;
+    transition: 0.2s;
 }
 
 .social-icons i:hover{
-	background-color: #fff;
-	color: #000;
+	background: var(--footer-clr);
+	color: #fff;
+    transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
@@ -263,7 +269,7 @@ header {
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid var(--border-clr);
-    background-color: var(--header-clr);
+    background: var(--header-clr);
     display: flex;
     flex-direction: column;
 }
@@ -311,9 +317,11 @@ header {
     align-items: center; 
     justify-content: center;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .Profile i:hover {
+    transform: translateY(-1px);
     background-color: var(--hover-clr);
     color: var(--hover-text-clr);   
     border-color: var(--hover-text-clr-clr); 
@@ -487,7 +495,7 @@ header .logout-btn1{
 #nav-bar .dropdown .sub-menu {
     flex-direction: column;
     background: var(--header-clr);
-    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.2);
     position: absolute;
     top: 100%;
     left: 0;
@@ -834,6 +842,16 @@ footer p{
     margin: 10px 0px;
     margin-top: 0px;
     justify-content: center;
+
+.tab-btn{
+    background: #C2C6BC;
+    color: black;
+}
+
+.tab-btn:hover{
+    background: #BDC6BC;
+    color: black;
+}
 }
 
 .recent-activity h2,
