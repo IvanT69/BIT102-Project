@@ -390,14 +390,45 @@ header {
     margin-top: 0px;
 }
 
-.HomePage .featured-guides ul, .HomePage .community-highlights ul{
-    margin-left: 0px;
-    list-style-type: none; 
+.HomePage .featured-guides ul, 
+.HomePage .community-highlights ul {
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
 }
 
-.featured-guides ul li, .community-highlights ul li{
-    list-style-type: none; 
-    padding-top: 12px;
+/*Featured Guides*/
+.featured-guides h3{
+    text-align: center;
+}
+
+.featured-guides ul {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  gap: 20px;
+  
+}
+
+.featured-guides li {
+  background: #F1EFEE;
+  padding: 20px;
+  border-radius: var(--base1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.featured-guides li:hover {
+  transform: translateY(-2px);
+}
+
+.featured-guides strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 
 .community-highlights h3{
@@ -407,6 +438,60 @@ header {
 .featured-guides ul strong, .community-highlights ul {
     text-decoration: underline; 
     color: var(--text-clr);
+}
+
+.featured-guides a{
+    text-decoration: none;
+}
+
+/*Community Highlights*/
+.community-highlights {
+  border-radius: var(--base1);
+}
+
+.community-highlights ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+  position: relative;
+}
+
+.community-highlights ul::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--card-clr);
+  border-radius: 2px;
+}
+
+.community-highlights li {
+  position: relative;
+  background: #F1EFEE;
+  margin-bottom: 20px;
+  padding: 15px 20px 15px 55px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+}
+
+.community-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 18px;
+  width: 16px;
+  height: 16px;
+  background: var(--card-clr);
+  border-radius: 50%;
+  border: 3px solid #F1EFEE;
+}
+
+.community-highlights li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 
@@ -941,11 +1026,20 @@ footer p{
 
 .forum-search #searchInput {
     padding: 12px 20px;    
-    border-radius: 12px;
+    border-radius: var(--base1);
     width: 500px;     
     text-align: left;
     color: black;
     box-sizing: border-box; 
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.forum-search #searchInput:focus {
+    border-color: var(--footer-clr);
+    box-shadow: 0 0 8px var(--footer-clr);
+    color: black;
 }
 
 .forum-search #searchInput::placeholder {
@@ -1045,10 +1139,91 @@ footer p{
     width: 600px;
 }
 
+#food-exploration-guide #FoodHunt,
+#food-exploration-guide #TopFoods,
+#food-exploration-guide #SpotRestaurant
+{
+  background-color: #E2E0DD;
+  margin: var(--base);
+  padding: 20px;
+  border-radius: var(--base1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+#food-exploration-guide #FoodHunt:hover,
+#food-exploration-guide #TopFoods:hover,
+#food-exploration-guide #SpotRestaurant:hover
+{
+  transform: translateY(-5px);
+}
+
+#food-exploration-guide #TopFoods ul {
+  margin-left: 0;
+  padding: var(--base1) 0px 0px;
+  list-style: none;
+  border-radius: var(--base1);
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--base1);
+}
+
+#food-exploration-guide #TopFoods ul li figure{
+  min-width: 100%;
+  min-height: 100%;
+  padding: var(--base1);
+  border: 1px solid black;
+  border-radius: var(--base1);
+  display: grid;
+  align-content: start;
+
+  figcaption{
+    display: grid;
+    align-content: start;
+    color: black;
+  }
+}
+
+#food-exploration-guide #TopFoods ul li img {
+  width: 100%;       
+  aspect-ratio: 1 / 1; 
+  object-fit: cover; 
+  border-radius: var(--base1);
+}
+
 @media (max-width: 768px) {
 .recent-activity,
 .saved-items {
     width: revert;
+}
+
+#food-exploration-guide #TopFoods ul {
+  margin-left: 0;
+  padding: var(--base1) 0px 0px;
+  list-style: none;
+  border-radius: var(--base1);
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--base1);
+}
+
+#food-exploration-guide #TopFoods ul li figure{
+  max-width: 100%;
+  max-height: 100%;
+  padding: var(--base1);
+  border: 1px solid black;
+  border-radius: var(--base1);
+  display: grid;
+  align-content: start;
+
+  figcaption{
+    display: grid;
+    align-content: start;
+    color: black;
+  }
 }
 }
 
