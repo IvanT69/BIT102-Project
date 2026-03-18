@@ -12,6 +12,7 @@
     --btn-clr: #505B4E;
     --btn-clr-hover: #4E5B57;
     --card-clr:#505B4E;
+    --card-clr2: #F1EFEE;
     --card-text-clr: #eff2ef;
 	--font-type: "Montserrat", sans-serif;
     --logo-type: "Satisfy", cursive;
@@ -413,6 +414,7 @@ header {
     border-radius: var(--base1);
     transform: translateY(-5px);
     box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    background: var(--card-clr2);
 }
 
 .discussion-item {
@@ -444,7 +446,7 @@ header {
 }
 
 .featured-guides li {
-  background: #F1EFEE;
+  background: var(--card-clr2);
   padding: 20px;
   border-radius: var(--base1);
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -500,7 +502,7 @@ header {
 
 .community-highlights ul h3 {
   position: relative;
-  background: #F1EFEE;
+  background: var(--card-clr2);
   margin-bottom: var(--base1);
   padding: 15px 20px 15px 55px;
   border-radius: 12px;
@@ -517,7 +519,7 @@ header {
   height: 16px;
   background: var(--card-clr);
   border-radius: 50%;
-  border: 3px solid #F1EFEE;
+  border: 2px solid var(--card-clr2);
 }
 
 .community-highlights ul h3:hover {
@@ -1193,7 +1195,7 @@ footer p{
 #food-exploration-guide #TopFoods,
 #food-exploration-guide #SpotRestaurant
 {
-  background-color: #E2E0DD;
+  background-color: var(--card-clr2);
   margin: var(--base);
   padding: 20px;
   border-radius: var(--base1);
@@ -1217,6 +1219,7 @@ footer p{
     gap: var(--base1);
 
     li{
+    gap: var(--base1);
     padding: var(--base1);
     border: 1px solid black;
     border-radius: var(--base1);
@@ -1279,13 +1282,56 @@ footer p{
   border-radius: var(--base1);
 }
 
+#food-exploration-guide #SpotRestaurant ul{
+    margin-top: var(--base1);
+    margin-left: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--base1);
+
+    i {
+        color: black;
+        font-size: var(--base);
+    }
+
+    li {
+        gap: var(--base1);
+        padding: var(--base1);
+        border: 1px solid black;
+        border-radius: var(--base1);
+        align-items: center;
+        display: flex;
+        transition: 0.3s ease;
+    }
+
+    li:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+}
+
+.food-tips div, #cafe-hunting div{
+    background-color: var(--card-clr2);
+    margin: var(--base);
+    padding: 20px;
+    border-radius: var(--base1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.food-tips div:hover, #cafe-hunting div:hover{
+    transform: translateY(-5px);
+}
+
+
 @media (max-width: 768px) {
 .recent-activity,
 .saved-items {
     width: revert;
 }
 
-#food-exploration-guide #FoodHunt ul{
+#food-exploration-guide #FoodHunt ul, #food-exploration-guide #SpotRestaurant ul{
     grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
