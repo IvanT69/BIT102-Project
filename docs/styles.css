@@ -382,10 +382,6 @@ header {
     margin-top: 24px;
 }
 
-.discussion-item h4{
-    padding-top: 12px;
-}
-
 .discussion-item p{
     margin-top: 0px;
 }
@@ -396,6 +392,41 @@ header {
     padding: 0;
     list-style: none;
     align-items: center;
+}
+
+/*Trending Discussions*/
+.trending-discussions div{
+    margin: var(--base1);
+
+    h3{
+        display: flex;
+        justify-content: center;
+    }
+}
+.discussion-item{
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.discussion-item:hover {
+    padding: var(--base1);
+    border-radius: var(--base1);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.discussion-item {
+    padding: 15px 0;
+    border-bottom: 1px solid black;
+}
+
+.discussion-item h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.discussion-item p {
+    font-size: 0.9rem;
 }
 
 /*Featured Guides*/
@@ -422,7 +453,7 @@ header {
 }
 
 .featured-guides li:hover {
-  transform: translateY(-2px);
+  transform: translateY(-5px);
 }
 
 .featured-guides strong {
@@ -432,11 +463,11 @@ header {
 }
 
 .community-highlights h3{
+    text-decoration: underline;
     padding-top: 12px;
 }
 
-.featured-guides ul strong, .community-highlights ul {
-    text-decoration: underline; 
+.featured-guides ul strong, .community-highlights ul { 
     color: var(--text-clr);
 }
 
@@ -467,17 +498,17 @@ header {
   border-radius: 2px;
 }
 
-.community-highlights li {
+.community-highlights ul h3 {
   position: relative;
   background: #F1EFEE;
-  margin-bottom: 20px;
+  margin-bottom: var(--base1);
   padding: 15px 20px 15px 55px;
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.06);
   transition: 0.3s ease;
 }
 
-.community-highlights li::before {
+.community-highlights ul h3::before {
   content: "";
   position: absolute;
   left: 12px;
@@ -489,11 +520,30 @@ header {
   border: 3px solid #F1EFEE;
 }
 
-.community-highlights li:hover {
+.community-highlights ul h3:hover {
   transform: translateX(5px);
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
+.community-highlights ul div{
+    border: 1px solid black;
+    border-radius: var(--base1);
+    margin-left: calc(var(--base1)*2.5);
+    margin-bottom: var(--base1);
+    padding: var(--base1);
+}
+
+.community-highlights ul div li p{
+    margin-top: 0px;
+}
+
+.community-highlights ul div li a{
+    color: black;
+}
+
+.community-highlights ul div li a:hover{
+    color: var(--btn-clr-hover);
+}
 
 footer {
     width: 100%;
@@ -1092,7 +1142,7 @@ footer p{
 }
 
 .forum-card:hover{
-    transform: translateY(-3px);
+    transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
@@ -1172,6 +1222,12 @@ footer p{
     border-radius: var(--base1);
     align-items: center;
     display: flex;
+    transition: 0.3s ease;
+    }
+
+    li:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
     i{
@@ -1189,6 +1245,15 @@ footer p{
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--base1);
+
+  li{
+    transition: 0.3s ease;
+  }
+
+  li:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
 }
 
 #food-exploration-guide #TopFoods ul li figure{
