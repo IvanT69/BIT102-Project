@@ -1158,6 +1158,28 @@ footer p{
   transform: translateY(-5px);
 }
 
+#food-exploration-guide #FoodHunt ul{
+    margin-top: var(--base1);
+    margin-left: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--base1);
+
+    li{
+    padding: var(--base1);
+    border: 1px solid black;
+    border-radius: var(--base1);
+    align-items: center;
+    display: flex;
+    }
+
+    i{
+        color: black;
+        font-size: var(--base);
+    }
+}
+
 #food-exploration-guide #TopFoods ul {
   margin-left: 0;
   padding: var(--base1) 0px 0px;
@@ -1196,6 +1218,10 @@ footer p{
 .recent-activity,
 .saved-items {
     width: revert;
+}
+
+#food-exploration-guide #FoodHunt ul{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 #food-exploration-guide #TopFoods ul {
