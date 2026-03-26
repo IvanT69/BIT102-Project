@@ -1493,7 +1493,15 @@ footer p{
     align-content: start;
     color: black;
   }
+
 }
+
+  .food-tips div ul{
+    display: flex;
+    flex-direction: column;
+    }
+
 }
+
 
 
