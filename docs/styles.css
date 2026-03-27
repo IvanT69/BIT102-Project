@@ -1227,19 +1227,20 @@ footer p{
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
-}
-.recent-activity ul li p{
+
+    p{
         margin: 0px 0px;
         text-align: left;
-}
+    }
 
-.recent-activity ul li p, span, strong{
+    p, span, strong{
     color: black;
-}
+    }
 
-.recent-activity ul li span{
+    span{
         margin-top: var(--base1);
         font-size: var(--base1);
+    }
 }
 
 .recent-activity ul li:hover{
@@ -1272,24 +1273,13 @@ footer p{
     transform: translateY(-5px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
- 
-#submit-resource{
-    background-color: #f9f9f9;
-    padding: 30px;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-#submit-resource h2 {
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 1.8em;
-    text-align: center;
-}
 
 .resource-form {
+    background-color: var(--card-clr2);
+    padding: 30px;
+    border-radius: 10px;
+    margin: var(--base);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -1298,6 +1288,7 @@ footer p{
 .resource-form input[type="text"],
 .resource-form select,
 .resource-form textarea {
+    color: black;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -1307,10 +1298,14 @@ footer p{
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+.resource-form option{
+    color: black;
+}
+
 .resource-form input[type="text"]:focus,
 .resource-form select:focus,
 .resource-form textarea:focus {
-    border-color: #27ae60; /* Green accent */
+    border-color: #27ae60;
     box-shadow: 0 0 5px rgba(39, 174, 96, 0.3);
     outline: none;
 }
@@ -1318,6 +1313,7 @@ footer p{
 .resource-form textarea {
     resize: vertical;
     min-height: 100px;
+    color: black;
 }
 
 .resource-form button[type="submit"] {
@@ -1341,6 +1337,23 @@ footer p{
     transform: translateY(0);
 }
 
+.shared-container{
+    margin: var(--base);
+    border-radius: var(--base1);
+    background-color: var(--card-clr2);
+    padding: var(--base1);
+}
+
+.resource-item{
+    margin: var(--base1);
+    padding: var(--base1);
+    border: 1px solid black;
+    border-radius: var(--base1);
+}
+
+.resource-item i{
+    color: black;
+}
 
 #food-exploration-guide #FoodHunt,
 #food-exploration-guide #TopFoods,
