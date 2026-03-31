@@ -1337,11 +1337,42 @@ footer p{
     transform: translateY(0);
 }
 
+#filter-section label strong{
+    color: black;
+}
+
+#filter-section{
+    margin: 10px auto var(--base1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#filter-section option{
+    color: black;
+}
+
+#category_filter{
+    padding: 12px;
+    border-radius: 12px;
+    margin-left: 12px;
+    color: var(--text-clr);
+}
+
 .shared-container{
     margin: var(--base);
     border-radius: var(--base1);
     background-color: var(--card-clr2);
     padding: var(--base1);
+}
+
+.shared-container p{
+    margin-top: 0px;
+}
+
+.shared-container article{
+    margin-top: 15px;
+    color: black;
 }
 
 .resource-item{
@@ -1351,8 +1382,22 @@ footer p{
     border-radius: var(--base1);
 }
 
-.resource-item i{
+.resource-item i {
+    color: inherit;
+}
+
+.resource-item strong{
     color: black;
+}
+
+.delete_resource{
+    text-decoration: none;
+    color: black;
+}
+
+.resource-item .delete_resource:hover{
+    text-decoration: underline;
+    color: #e74c3c;
 }
 
 #food-exploration-guide #FoodHunt,
