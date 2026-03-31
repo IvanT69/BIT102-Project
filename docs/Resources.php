@@ -112,7 +112,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
         </select>
         
         <textarea name="content" placeholder="Share your tips or guide here..." required></textarea>
-        <input type="text" name="image_url" placeholder="Image URL (optional)">
         
         <button type="submit" name="submit_resource">Post Resource</button>
     </form>
@@ -130,10 +129,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
                 echo "<div class='resource-item'>";
                 echo "<h3>" . htmlspecialchars($row['title']) ."</h3>";
                 echo "<p>" . nl2br(htmlspecialchars($row['content'])) . "</p>";
-                if (!empty($row['image_url'])) {
-                        echo "<img src='" . htmlspecialchars($row['image_url']) . "' 
-                        style='max-width:100%; height:auto; border-radius:8px; margin-top:10px;' />";
-            }
                 echo "<a href='process_resource.php?delete=" . $row['id'] . "' onclick='return confirm(\"Are you sure you want to delete this?\")' style='color: #e74c3c; text-decoration: none; font-size: 0.9em;'><i class='fa-solid fa-trash'></i> Delete</a>";
                 echo "</div>";
             }
